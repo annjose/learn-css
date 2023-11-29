@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <style>
+        .large-screen-text {
+            display: none;
+        }
+
+        /* Will show/hide when you resize the window up or down. Doesn't work with device emulation in browser dev tools.*/
+        @media (min-width: 800px) {
+            .large-screen-text {
+                display: block;
+            }
+
+            .small-screen-text {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<h3>Media Queries</h3>
+<div>This should be visible on all screens - SMALL and BIG.</div>
+<div class="small-screen-text">Visible on SMALL mobile screens only.</div>
+<div class="large-screeen-text">Visible on BIG desktop screens only.</div>
+
+
+</html>
