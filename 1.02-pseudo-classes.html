@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<!-- You can open this file using LiveServer plugin in VS Code. The server will run as http://127.0.0.1:5500/index.html-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Selectors</title>
+
+    <style>
+        button {
+            margin-left: 6px;
+        }
+
+        button:hover {
+            background-color: lightskyblue;
+        }
+
+        button:focus {
+            background-color: royalblue;
+            color: white;
+            border: 2px solid royalblue;
+            /* override the default black border in the browser default CSS */
+        }
+
+        input:checked {
+            width: 40px;
+            height: 2em;
+        }
+
+        .first-child-example b:first-child {
+            color: red;
+        }
+
+        .first-child-example span:first-child {
+            color: red;
+        }
+
+        .first-of-type-example b:first-of-type {
+            color: red;
+        }
+
+        .first-of-type-example span:first-of-type {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello Selectors</h1>
+
+    <p>
+    <h3>Pseudo Classes</h3>
+
+    <button class="hover-highlight">Highlights on hover</button>
+
+    <button>Focus pop!</button>
+    <br />
+    <label><input type="checkbox">Check me to pop!</label>
+
+    <div>first-child example (first child should be red color)</div>
+    <div class="first-child-example">
+        <b>First child bold (should be red)</b> |
+        <span>First child span, but not the first element in the parent (should be black)</span> |
+        <b>Second child bold (should be black)</b> |
+        <span>Second child span (should be green)</span>
+    </div>
+    <p></p>
+
+    <div>first-of-type example (first of type should be blue color)</div>
+    <div class="first-of-type-example">
+        <b>First child bold (should be red)</b>|
+        <span>First child span, but not the first element in the parent (should be black).</span>|
+        <span>Second child span (should be green)</span>
+        </p>
+    </div>
+    </p>
+</body>
+
+</html>
