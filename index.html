@@ -2,6 +2,7 @@
 <html lang="en">
 <!-- You can open this file using LiveServer plugin in VS Code. The server will run as http://127.0.0.1:5500/index.html-->
 <!-- The contents of this file orginated from the MDN CSS tutorial https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started-->
+
 <head>
     <meta charset="utf-8" />
     <title>Getting started with CSS</title>
@@ -10,22 +11,24 @@
 </head>
 
 <body onload="init('body onload event')">
+
     <h1>Hello CSS World! I am a level one heading</h1>
 
     <p>
-        This is a paragraph of text. In the text is a
-        <span>span element</span> and also a
-        <a href="https://example.com">link</a>.
+        This is a paragraph of text with big fonts. In the text is a
+        <span>green span element</span> and <span class="special">special orange span element</span>.<br />
+        This is a <span class="double-special">double special span element</span>.
     </p>
 
+    <p><a href="https://example.com" target="_blank">This is a link</a>.</p>
     <p>
         This is the second paragraph. It contains an <em>emphasized</em> element.
     </p>
 
     <ul>
         <li>Item <span>one</span></li>
-        <li>Item two</li>
-        <li>Item <em>three</em></li>
+        <li class="special">Item two</li>
+        <li>Item <em>three emphasized</em></li>
     </ul>
 </body>
 
