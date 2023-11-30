@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <!-- ::placeholder pseudo eleemnt -->
+    <style>
+        input::placeholder {
+            color: lightslategray;
+            font-style: italic;
+        }
+    </style>
+
+    <label>
+        Zip code:
+        <input type="text" placeholder="12345">
+    </label>
+
+    <!-- ::before and ::after pseudo elements -->
+    <style>
+        p::before {
+            content: '--> ';
+            color: red;
+        }
+
+        p::after {
+            content: ' <--';
+            color: red;
+        }
+    </style>
+
+    <p>Simple p tag with before and after</p>
+
+    <!-- create a circle with css only -->
+    <style>
+        span::before {
+            content: '';
+            display: block;
+            background-color: deeppink;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+    </style>
+    <span> A circle should appear above this.</span>
+
+    <!-- combinators -->
+    <style>
+        /* combinator with whitespace - any level descendants */
+        .main-list li {
+            color: red;
+        }
+
+        /* combinator with > - immediate descendants */
+        .main-list>li {
+            list-style: lower-greek;
+            color: blue;
+        }
+
+        li {
+            color: deeppink;
+        }
+    </style>
+
+    <ul class="main-list">
+        <li>One black</li>
+        <li>Two black</li>
+        <li>Three black, inner red
+            <ul>
+                <li>One red</li>
+                <li>Two red</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>Regular item pink</li>
+    </ul>
+
+    <!-- Coding challenge: hrefs inside the main article should have deeppink color and should hide underline when you hover. hrefs inside aside should be black and do reverse of underline/hover-->
+    <style>
+        /* TODO */
+        article a {
+            color: deeppink;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    
+        aside a {
+            color: black;
+            text-decoration: underline;
+        }
+    
+        aside a:hover {
+            text-decoration: none;
+        }
+    </style>
+    <article class="recipe">
+        <h2>Chicken Vindaloo</h2>
+        <div>
+            “Vindaloo” is a popular Indian <a href="">curry dish</a> that calls for meat to be marinated.
+        </div>
+        <aside>
+            <div>
+                Quick warning: <strong>this recipe is <em>spicy</em></strong>. <a href="">Click here</a> for an alternative.
+            </div>
+        </aside>
+    </article>
+
+</body>
+
+</html>
