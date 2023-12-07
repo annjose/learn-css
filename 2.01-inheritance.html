@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <style>
+        p {
+            color: deeppink;
+        }
+
+        div {
+            border: 1px solid blue;
+        }
+
+        span {
+            border: 1px solid blue
+        }
+
+        span>em {
+            border: 1px solid red;
+        }
+    </style>
+
+    <p>Hello <em>world</em>! How are you?</p>
+    <div>Border on the whole text, but not on <em>this em element</em>.</div>
+    <br />
+    <span>Border on the whole text, and also on <em>this em element</em>.</span>
+
+    <br />
+
+    <p style="color: initial;">This is regular text with default color. And <a href="#">this is a hyperlink with DEFAULT
+            browser style</a>.</p>
+    <p style="color: red">This is regular text with red color. And <a href="#">this is a hyperlink with DEFAULT browser
+            style</a>.</p>
+
+    <p style="color: initial;">This is regular text with default color. And <a href="#" style="color: inherit;">this is
+            a hyperlink with INHERITED color</a>.</p>
+    <p style="color: red">This is regular text with red color. And <a href="#" style="color: inherit;">this is a
+            hyperlink with INHERITED color</a>.</p>
+</body>
+
+</html>

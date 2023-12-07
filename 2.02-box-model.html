@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <style>
+        section {
+            width: 200px;
+        }
+
+        div.box-sizing-default {
+            width: 100%;
+            border: 2px solid red;
+            padding: 10px;
+        }
+
+        div.box-sizing-override {
+            width: 100%;
+            border: 2px solid blue;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <section>
+        <!-- width of this div (in dev tools) is 224px, height = 24px -->
+        <div class="box-sizing-default"></div>
+        <br />
+        <!-- width of this div is 200px, height = 24px -->
+        <div class="box-sizing-override"></div>
+    </section>
+    <br />
+
+    <style>
+        .even-padding {
+            padding: 10px;
+            background-color: tomato;
+        }
+        .asymmetric-padding {
+            padding-left: 10px;
+            padding-right: 20px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            background-color: aqua;
+        }
+    </style>
+
+    <section>
+        <div class="even-padding">Even padding</div>
+        <div class="asymmetric-padding">Asymmetric padding</div>
+    </section>
+</body>
+
+</html>
