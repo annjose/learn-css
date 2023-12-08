@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <style>
+        p {
+            border: 2px dashed deeppink;
+        }
+    </style>
+
+    <p>This text has a pink border</p>
+
+    <style>
+        .box {
+            border: 4px solid black;
+            width: 50px;
+            height: 50px;
+        }
+
+        .box.another {
+            border-color: blueviolet;
+        }
+    </style>
+
+    <div class="box"></div>
+    <div class="box another"></div>
+
+    <br />
+
+    <style>
+        .border-radius-sample {
+            width: 100px;
+            height: 100px;
+            border: 4px solid deeppink;
+            border-radius: 10px 10px 40px 40px;
+        }
+    </style>
+    <div class="border-radius-sample"></div>
+
+    <br />
+
+    <!-- Outline example -->
+    <style>
+        .outline-example {
+            border: 4px solid red;
+            outline: 3px dashed currentColor;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <div class="outline-example"> </div>
+</body>
+
+</html>
