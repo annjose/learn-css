@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <style>
+        section {
+            width: 200px;
+            height: 200px;
+            border: 2px solid deeppink;
+            background-color: aqua;
+        }
+
+        .regular-margin {
+            margin: 50px;
+
+            width: 50%;
+            height: 50%;
+            border: 2px solid black;
+            background-color: deeppink;
+        }
+
+        .asymmetric-margin {
+            margin: 20px 50px;
+
+            width: 50%;
+            height: 50%;
+            background-color: deeppink;
+            border: 2px solid black;
+        }
+    </style>
+    <section>
+        <div class="regular-margin"></div>
+    </section>
+
+    <br />
+
+    <section>
+        <div class="asymmetric-margin"></div>
+    </section>
+    <div>Line 3</div>
+
+    <br />
+
+    <!-- Negative margin examples -->
+    <h3>Negative margin examples - element pulled out of the container</h3>
+    <style>
+        .negative-margin-1 {
+            margin-top: -20px;
+            margin-left: -20px;
+
+            width: 50%;
+            height: 50%;
+            border: 2px solid black;
+            background-color: deeppink;
+        }
+    </style>
+    <section>
+        <!-- this div is rendered outside the section element -->
+        <div class="negative-margin-1"></div>
+    </section>
+
+    <h3>Sibling pulled up</h3>
+    <style>
+        .negative-margin-2 {
+            margin-bottom: -20px;
+
+            width: 50%;
+            height: 50%;
+            border: 2px solid black;
+            background-color: deeppink;
+        }
+
+        .small-box {
+            width: 25%;
+            height: 25%;
+            border: 2px solid black;
+            background-color: blue;
+        }
+    </style>
+    <section>
+
+        <div class="negative-margin-2"></div>
+
+        <!-- this sibling div is rendered overlapping the previous box -->
+        <div class="small-box"></div>
+    </section>
+
+    <br />
+
+    <!-- Cascading effect of negative margins -->
+    <h3>Cascading effect of negative margins - all subsequent elements pulled up</h3>
+    <br />
+    <style>
+        .box {
+            width: 25%;
+            height: 25%;
+            border: 2px solid blue;
+        }
+
+        .lifted.box {
+            margin-top: -32px;
+            border-color: deeppink;
+        }
+    </style>
+    <section>
+        <div class="lifted box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+
+    <h3>Center an element using margin auto</h3>
+    <style>
+        main {
+            width: 100%;
+            height: 100px;
+            border: 2px solid blue;
+            background-color: aqua;
+        }
+
+        .center-me {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: peachpuff;
+        }
+    </style>
+    <main>
+        <div class="center-me">Hello World. This element is horizontally centered</div>
+    </main>
+</body>
+
+</html>
