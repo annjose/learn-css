@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <style>
+        h2 {
+            border: 2px dotted blue;
+        }
+
+        h2.fit-content {
+            width: fit-content;
+        }
+
+        .red.box {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+    <h2>Hello World</h2>
+    <h2 class="fit-content">With fit-content width</h2>
+    <div class="red box"></div>
+
+    <h3> Inline elements with and without whitespace in between</h3>
+    <strong>link1</strong> <strong>link2</strong> <br />
+    <strong>link1</strong><strong>link2</strong>
+
+    <h3>Inline elements line wrapping the text</h3>
+    <em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+        specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+        essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em>
+
+    <h3>Elements with inline-block display type</h3>
+    <style>
+        .sample-inline-block {
+            display: inline-block;
+            width: 200px;
+            margin-top: 24;
+            background-color: yellow;
+            border: 2px solid red;
+        }
+
+        .box-800 {
+            width: 800px;
+            height: 100px;
+            border: 2px solid blue;
+        }
+    </style>
+
+    <div class="box-800">The word hello world after this is the regular inline strong <strong
+            style="background-color: yellow;">Hello World</strong></div>
+    <div class="box-800">The word hello world after this is the inline-block strong <strong
+            class="sample-inline-block">Hello World</strong></div>
+</body>
+
+</html>
