@@ -4,16 +4,41 @@
 
 <body>
     <style>
-        h1 {
-            /* width: 100%; */
-            margin: 0 16px;
+        /* reset the default margins of body */
+        body{
+            margin: 0px;
+        }
+
+        h1.margin-zero-width-default {
+            margin: 0;
             background-color: chartreuse;
+        }
+
+        h1.margin-16px-width-auto {
+            width: auto;
+            margin: 0 16px;
+            background-color: lightblue;
+        }
+
+        h1.margin-16px-width-100pc {
+            width: 100%;
+            margin: 0 16px;
+            background-color: lightpink;
         }
     </style>
 
-    <h1>
-        Hello World
-    </h1>
+    <!-- Content dimensions. Width = 1000 or the width of the window. Height = 37px because of text height. All four sides of H1 are flush with the window-->
+    <h1 class="margin-zero-width-default"> Margin 0, Width default auto </h1>
+
+    <!-- Content dim = 968W x 37H (968 = 1000 - 16 - 16). And now H1 has a 16px gap on left and right. 
+        Top is flush with the top of the page. Bottom there is as much gap as the window height. -->
+    <h1 class="margin-16px-width-auto">Margin 16 px, Width auto</h1>
+    
+    <!-- Content dim = 1000W x 37H (note that the content width did not reduce to accomodate the margins). 
+        And now H1 has a 16px gap visible ONLY on the left. Right is flush with the right edge of the page. Dev tools still show 16px margin on left and right.
+        Top is flush with the top of the page. Bottom there is as much gap as the window height. -->
+    <h1 class="margin-16px-width-100pc">Margin 16 px, Width 100%</h1>
+    <h1 class="margin-16px-width-100pc">Margin 16 px, Width 100% - repeat</h1>
 </body>
 
 </html>
