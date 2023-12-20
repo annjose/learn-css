@@ -3,26 +3,28 @@
 <html>
 
 <body>
+
+    <!-- Make a div element to take the full vertical space.
+        Set the height of all elements up the chain to be 100%. And set the min-height of this element to be 100% -->
     <style>
         html,
         body {
+            /* The following line is also necessary to make the div fill the vertical space */
             height: 100%;
+
             margin: 0;
             padding: 0;
         }
 
-        .wrapper {
+        .full-length {
+            /* Without the following line, the div will occupy only the height of the text, i.e. 18px */
             min-height: 100%;
             background-color: peachpuff;
         }
-
-        p {
-            background-color: lightskyblue;
-        }
     </style>
 
-    <div class="wrapper">
-        <p>Hello World</p>
+    <div class="full-length">
+        This div should take up the entire vertical space
     </div>
 </body>
 
