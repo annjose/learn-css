@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <h3> Rule 1 - Only vertical margins collapse. Horizontal margins don't. </h3>
+
+    <style>
+        p {
+            margin-top: 24px;
+            margin-bottom: 24px;
+
+            border: 2px solid red;
+        }
+
+        span {
+            margin-left: 24px;
+            margin-right: 24px;
+
+            border: 2px dashed blue;
+        }
+    </style>
+
+    <p> Paragraph One - <span>Word1</span><span>Word2</span></p>
+    <p> Paragraph Two - <span>Word1</span><span>Word2</span></p>
+    
+    <hr />
+
+    <h3> Rule 3 - Only adjacent margins collapse. They won't collapse if there is an element in between. </h3>
+
+    <style>
+        p {
+            margin-top: 24px;
+            margin-bottom: 24px;
+
+            border: 2px solid red;
+        }
+    </style>
+
+    <p> Paragraph One</p>
+    <br />
+    <p> Paragraph Two</p>
+
+    <hr />
+
+    <h3> Rule 4 - Bigger number wins - two div with 72px and 24px margins</h3>
+    <style>
+        div {
+            margin-top: 72px;
+            margin-bottom: 24px;
+
+            border: 2px solid blue;
+        }
+    </style>
+
+    <div> Div One</div>
+    <div> Div Two</div>
+
+    <hr />
+
+    <h3> Rule 5 - Margins collapse when the elements are nested - a p inside a main </h3>
+    <style>
+        p {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+    </style>
+
+    <main>
+        <p>Paragraph One</p>
+    </main>
+    <p>Paragraph Two</p>
+
+</body>
+
+</html>
