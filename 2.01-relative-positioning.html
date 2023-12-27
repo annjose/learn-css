@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <style>
+        section {
+            border: 2px solid;
+            background-color: lightgray;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid blue;
+            margin-bottom: 8px;
+        }
+
+        .pink {
+            border-color: deeppink;
+        }
+
+        .with-margin {
+            margin-top: 40px;
+
+        }
+
+        .with-relative-position {
+            position: relative;
+            top: 40px;
+        }
+    </style>
+
+    <section>
+        <p>Normal</p>
+        <div class="box pink"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+
+    <section>
+        <p>Margin (margin-top:40px)</p>
+        <div class="box pink with-margin"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+
+    <section>
+        <p>Relative position with top (position: relative, top: 40px)</p>
+        <div class="box pink with-relative-position"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </section>
+
+    <style>
+        .box-no-width {
+            /* width: 50px; */
+            height: 50px;
+            border: 2px solid blue;
+            margin-bottom: 8px;
+        }
+
+        .pink {
+            border-color: deeppink;
+        }
+
+        .with-margin-left {
+            margin-left: 120px;
+        }
+
+        .with-relative-position-left {
+            position: relative;
+            left: 120px;
+        }
+    </style>
+
+    <h3>Block element with NO width, resize the window to see the effect</h3>
+    <section>
+        With margin left 120px
+        <div class="box-no-width pink with-margin-left"></div>
+    </section>
+    <section>
+        With relative position left 120px
+        <div class="box-no-width pink with-relative-position-left"></div>
+    </section>
+
+    <style>
+        strong {
+            position: relative;
+            top: -4px;
+        }
+    </style>
+
+    <p>
+        Inline element with relative positioning.
+        This paragraph has some bolded text, and it <strong>appears to float</strong> a bit!
+    </p>
+</body>
+
+</html>
