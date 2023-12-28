@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- 3.01-containing-blocks-relative-position.html -->
+
+<body>
+    <style>
+        section {
+            margin: 20px;
+            border: 2px solid;
+
+            position: relative;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: deeppink;
+        }
+
+        .absolute-pos {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+
+        }
+    </style>
+
+    <section>
+        <h3>Absolute position with relative positioned parent</h3>
+        <div class="box absolute-pos"></div>
+        <p>Hello world</p>
+    </section>
+
+    <section>
+        <h3>Normal position</h3>
+        <div class="box"></div>
+        <p>Hello world</p>
+    </section>
+
+    <style>
+        .parent {
+            border: 2px solid silver;
+            padding: 16px;
+        }
+
+        .relative-pos {
+            position: relative;
+            border-color: black;
+        }
+
+        .pink-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: deeppink;
+        }
+    </style>
+
+    <div class="parent">
+        <div class="parent">
+            <div class="parent relative-pos">
+                <div class="parent">
+                    <div class="pink-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
