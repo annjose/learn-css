@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <body>
 
-    <!-- ::placeholder pseudo eleemnt -->
+<!-- ::placeholder pseudo element -->
     <style>
         input::placeholder {
             color: lightslategray;
@@ -16,7 +16,7 @@
         <input type="text" placeholder="12345">
     </label>
 
-    <!-- ::before and ::after pseudo elements -->
+<!-- ::before and ::after pseudo-elements -->
     <style>
         p::before {
             content: '--> ';
@@ -46,41 +46,43 @@
 
     <!-- combinators -->
     <style>
-        /* combinator with whitespace - any level descendants */
+
+        /* regular list element*/
+        li {
+            color: black;
+        }
+
+        /* Combinators - the order of defining these matter a lot. */
+        /* combinator with whitespace applies to any level descendants */
         .main-list li {
             color: red;
         }
 
-        /* combinator with > - immediate descendants */
+        /* combinator with > applies to immediate descendants only */
         .main-list>li {
-            list-style: lower-greek;
             color: blue;
-        }
-
-        li {
-            color: deeppink;
         }
     </style>
 
+<ul>
+    <li>Regular list with a black bullet</li>
+</ul>
     <ul class="main-list">
-        <li>One black</li>
-        <li>Two black</li>
-        <li>Three black, inner red
+        <li>Blue bullet one</li>
+        <li>Blue bullet two</li>
+        <li>Blue bullet three with inner items in red
             <ul>
-                <li>One red</li>
-                <li>Two red</li>
+                <li>Red item one</li>
+                <li>Red item two</li>
             </ul>
         </li>
-    </ul>
-    <ul>
-        <li>Regular item pink</li>
     </ul>
 
     <!-- Coding challenge: hrefs inside the main article should have deeppink color and should hide underline when you hover. hrefs inside aside should be black and do reverse of underline/hover-->
     <style>
         /* TODO */
         article a {
-            color: deeppink;
+            color: blue;
             text-decoration: none;
         }
     
@@ -97,12 +99,15 @@
             text-decoration: none;
         }
     </style>
+<hr/>
     <article class="recipe">
-        <h2>Chicken Vindaloo</h2>
+        <div>Article section - links are blue. If you hover, underline will appear.</div>
         <div>
-            “Vindaloo” is a popular Indian <a href="">curry dish</a> that calls for meat to be marinated.
+            "Vindaloo" is a popular Indian <a href="">curry dish</a> that calls for meat to be marinated.
         </div>
+        <hr/>
         <aside>
+            <div>Aside section - links are black underlined. If you hover, underline will disappear.</div>
             <div>
                 Quick warning: <strong>this recipe is <em>spicy</em></strong>. <a href="">Click here</a> for an alternative.
             </div>
