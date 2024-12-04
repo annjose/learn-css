@@ -2,17 +2,31 @@
 <html lang="en">
 
 <head>
+    <!-- The following meta tag is required to see the responsive content in the browser's dev tools -->
+    <!-- Without this meta tag, the show/hide behaviour in the media queries will not work as you resize the media window in dev tools.
+           It will work only when you resize the whole browser window -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
+        /* This text will be hidden on screens < 800px. */
         .large-screen-text {
             display: none;
         }
 
-        /* Will show/hide when you resize the window up or down. Doesn't work with device emulation in browser dev tools.*/
+        .small-screen-text {
+            display: block;
+            color: blue;
+        }
+
+        /* Now you define the special styles for big screens min-width: 800px; */
         @media (min-width: 800px) {
+            /* show the large text*/
             .large-screen-text {
                 display: block;
+                color: red;
             }
 
+            /* hide the small text*/
             .small-screen-text {
                 display: none;
             }
@@ -21,9 +35,9 @@
 </head>
 
 <h3>Media Queries</h3>
-<div>This should be visible on all screens - SMALL and BIG.</div>
-<div class="small-screen-text">Visible on SMALL mobile screens only.</div>
-<div class="large-screeen-text">Visible on BIG desktop screens only.</div>
+<div>This text should be visible on all screens - SMALL and BIG.</div>
+<div class="small-screen-text">SMALL screen text (<800px, mobile).</div>
+<div class="large-screen-text">LARGE screen text (>= 800px, desktop).</div>
 
 
 </html>
