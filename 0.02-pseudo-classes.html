@@ -11,11 +11,13 @@
             margin-left: 6px;
         }
 
-        button:hover {
-            background-color: lightskyblue;
+        /* applied to buttons with class 'hover-highlight' */
+        button.hover-highlight:hover {
+            color: blue;
+            background-color: yellow;
         }
 
-        button:focus {
+        button.focus-highlight:focus {
             background-color: royalblue;
             color: white;
             border: 2px solid royalblue;
@@ -27,19 +29,23 @@
             height: 2em;
         }
 
+        /* By default, all italics are green */
+        i {
+            color: green;
+        }
         .first-child-example b:first-child {
             color: red;
         }
 
-        .first-child-example span:first-child {
-            color: red;
+        .first-child-example i:first-child {
+            color: blue;
         }
 
         .first-of-type-example b:first-of-type {
             color: red;
         }
 
-        .first-of-type-example span:first-of-type {
+        .first-of-type-example i:first-of-type {
             color: blue;
         }
     </style>
@@ -53,27 +59,45 @@
 
     <h3>Pseudo Classes</h3>
 
-    <button class="hover-highlight">Highlights on hover</button>
+    <button>No hover/focus highlight</button>
 
-    <button>Focus pop!</button>
-    <br />
+    <button class="hover-highlight">Hover over me!</button>
+
+    <button class="focus-highlight">Click me!</button>
+    <button class="focus-highlight">Or tab into me!</button>
+    <hr/>
+
     <label><input type="checkbox">Check me to pop!</label>
 
-    <div>first-child example (first child should be red color)</div>
+    <hr/>
+    <div>Example of <b>first-child</b> pseudo class. All italics are green by default. If the first child is bold, it
+        will be red. If the first child is italic, it will be blue.
+    </div>
     <div class="first-child-example">
-        <b>First child bold (should be red)</b> |
-        <span>First child span, but not the first element in the parent (should be black)</span> |
+        <b>First child is bold, hence it should be red. </b> |
+        <i>First italic child, but not the first child in the parent (hence it should be the default green)</i> |
         <b>Second child bold (should be black)</b> |
-        <span>Second child span (should be green)</span>
+        <i>Second child italic (should be green)</i>
     </div>
 
-    <p></p>
+    <div class="first-child-example">
+        <i>First child is italic, hence it should be blue. </i> |
+        <b>This is the second child (a bold), but not the first child in the parent (hence it should be the default
+            black)</b> |
+        <b>Second child bold (should be the default black)</b> |
+        <i>Second child italic (should be the default green)</i>
+    </div>
 
-    <div>first-of-type example (first of type should be blue color)</div>
+    <hr/>
+
+    <div>Example of <b>first-of-type</b> pseudo class All italics are green by default. Any first bold type will be red.
+        Any first italic child is italic, it will be blue.
+    </div>
     <div class="first-of-type-example">
-        <b>First child bold (should be red)</b> |
-        <span>First child span, but not the first element in the parent (should be black).</span> |
-        <span>Second child span (should be green)</span>
+        <b>First bold child (should be red)</b> |
+        <i>First italic child, but not the first child in the parent (should be blue).</i> |
+        <b>Second bold child (should be the default black)</b> |
+        <i>Second italic child (should be the default green)</i>
     </div>
 
     </p>
