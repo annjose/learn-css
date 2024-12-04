@@ -1,91 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 
 <body>
 
-    <style>
-        .colorful-thing {
-            color: hsl(200deg 100% 50%);
-            border-bottom: 3px solid hsl(100deg 75% 50%);
-        }
-    </style>
-    <div class="colorful-thing">Hello</div>
+<style>
+    .colorful-thing {
+        color: hsl(200deg 100% 50%);
+        border-bottom: 3px solid hsl(100deg 75% 50%);
+    }
+</style>
+<div class="colorful-thing">Hello</div>
 
-    <style>
-        .box {
-            width: 40px;
-            height: 40px;
-        }
+<style>
+    .box {
+        width: 40px;
+        height: 40px;
+    }
 
-        .first.box {
-            background-color: hsl(350deg 100% 50% / 1);
-        }
+    .first.box {
+        background-color: hsl(350deg 100% 50% / 1);
+    }
 
-        .second.box {
-            background-color: hsl(350deg 100% 50% / 0.75);
-        }
+    .second.box {
+        background-color: hsl(350deg 100% 50% / 0.75);
+    }
 
-        .third.box {
-            background-color: hsl(350deg 100% 50% / 0.25);
-        }
-    </style>
-    <div class="first box"></div>
-    <div class="second box"></div>
-    <div class="third box"></div>
+    .third.box {
+        background-color: hsl(350deg 100% 50% / 0.25);
+    }
+</style>
+<div class="first box"></div>
+<div class="second box"></div>
+<div class="third box"></div>
 
-    <style>
-        .highlight {
-            background-color: hsl(50deg 100% 50% / 0.5);
-        }
-    </style>
+<style>
+    .highlight {
+        background-color: hsl(50deg 100% 50% / 0.5);
+    }
+</style>
 
-    <p> This is a <span class="highlight">highlighted text</span> right here.</p>
+<p> This is a <span class="highlight">highlighted text</span> right here.</p>
+<hr/>
 
-    <style>
-        .em-example-container {
-            font-size: 8px;
-        }
+<h2>Units example</h2>
 
-        .em-example-item {
-            font-size: 2em;
-            border: 2em;
-        }
-    </style>
-    <div class="em-example-container">em outer container
-        <p class="em-example-item">em item one</p>
-    </div>
+<h3>em unit - font-size relative to font-size</h3>
+<style>
+    p.em-font {
+        font-size: 36px;
+        color: blue;
+    }
+</style>
 
-    <style>
-        .rem-example-container {
-            font-size: 8px;
-        }
+<p class="em-font">
+    <span style="font-size: 1em">This </span>
+    <span style="font-size: 0.8em">text </span>
+    <span style="font-size: 0.64em">gets </span>
+    <span style="font-size: 0.5em">smaller </span>
+    <span style="font-size: 0.4em">and </span>
+    <span style="font-size: 0.32em">smaller.</span>
+</p>
 
-        .rem-example-item {
-            font-size: 2rem;
-            border: 2rem;
-        }
-    </style>
-    <div class="rem-example-container">em outer container
-        <p class="rem-example-item">em item one</p>
-    </div>
+<hr/>
 
-    <style>
-        .outer {
-            background-color: peachpuff;
-            width: 100px;
-            height: 100px;
-        }
+<h3>em unit - padding-left relative to font size</h3>
+<style>
+    .em-example-container {
+        font-size: 12px;
+        border: 1px solid;
+    }
 
-        .inner {
-            background-color: black;
-            width: 50%;
-            height: 50%;
-        }
-    </style>
+    .em-example-item {
+        font-size: 2em;
+        background-color: peachpuff;
+        padding-left: 2em;
+    }
+</style>
+<div class="em-example-container">em outer container
+    <p class="em-example-item">em item one</p>
+</div>
 
-    <div class="outer">
-        <div class="inner"></div>
-    </div>
+<hr/>
+<h3>rem unit - padding-bottom relative to font size</h3>
+<style>
+    .rem-example-container {
+        border: 1px solid;
+    }
+
+    .rem-example-item {
+        font-size: 2rem;
+        background-color: peachpuff;
+        padding-left: 2rem;
+    }
+</style>
+<div class="rem-example-container">rem outer container
+    <p class="rem-example-item">rem item one</p>
+</div>
+
+<hr/>
+
+<h3>Percentage unit</h3>
+<style>
+    .outer {
+        background-color: peachpuff;
+        width: 100px;
+        height: 100px;
+    }
+
+    .inner {
+        background-color: black;
+        width: 50%;
+        height: 50%;
+    }
+</style>
+
+<div class="outer">
+    <div class="inner"></div>
+</div>
 
 </body>
 
