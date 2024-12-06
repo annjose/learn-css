@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="">
 
 <body>
 
@@ -16,13 +16,14 @@
         }
 
         div.box-sizing-override {
+            box-sizing: border-box;
             width: 100%;
             border: 2px solid blue;
             padding: 10px;
-            box-sizing: border-box;
         }
     </style>
 
+    <h3>Box Model - content-box vs. border-box</h3>
     <section>
         <!-- width of this div (in dev tools) is 224px, height = 24px -->
         <div class="box-sizing-default"></div>
@@ -30,12 +31,16 @@
         <!-- width of this div is 200px, height = 24px -->
         <div class="box-sizing-override"></div>
     </section>
-    <br />
+    <hr/>
 
+    <h3>Padding Properties</h3>
     <style>
+        .padding-section {
+            width: 400px;
+        }
         .even-padding {
             padding: 10px;
-            background-color: tomato;
+            background-color: peachpuff;
         }
         .asymmetric-padding {
             padding-left: 10px;
@@ -46,9 +51,9 @@
         }
     </style>
 
-    <section>
-        <div class="even-padding">Even padding</div>
-        <div class="asymmetric-padding">Asymmetric padding</div>
+    <section class="padding-section">
+        <div class="even-padding">Symmetric padding (padding: 10px)</div>
+        <div class="asymmetric-padding">Asymmetric padding (left: 10, R: 20, T: 30, B: 40)</div>
     </section>
 </body>
 
