@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="">
 
 <body>
     <style>
@@ -39,13 +39,18 @@
         recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</em>
 
     <h3>Elements with inline-block display type</h3>
+    Below, both divs are 800 px wide and 100px high. The first div has the default inline display type, and the second
+    one has the inline-block display type.
     <style>
+        strong {
+            background-color: peachpuff;
+            border: 2px solid red;
+        }
         .sample-inline-block {
             display: inline-block;
             width: 200px;
-            margin-top: 24;
-            background-color: yellow;
-            border: 2px solid red;
+            margin-top: 24px;
+            height: 40px;
         }
 
         .box-800 {
@@ -55,10 +60,11 @@
         }
     </style>
 
-    <div class="box-800">The word hello world after this is the regular inline strong <strong
-            style="background-color: yellow;">Hello World</strong></div>
-    <div class="box-800">The word hello world after this is the inline-block strong <strong
-            class="sample-inline-block">Hello World</strong></div>
+    <div class="box-800">Hello world on this line is the default inline display:
+        <strong>Hello World</strong></div>
+    <div class="box-800">Hello world on this line is the inline-block display
+        <strong class="sample-inline-block">Hello World</strong>
+    </div>
 </body>
 
 </html>

@@ -1,56 +1,92 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="">
 
 <body>
-    <style>
-        /* reset the default margins of body */
-        body{
-            margin: 0px;
-        }
+<style>
+    /* reset the default margins of body */
+    body {
+        margin: 0;
+    }
 
-        h1.margin-zero-width-default {
-            margin: 0;
-            background-color: chartreuse;
-        }
+    h1.margin-zero-width-default {
+        margin: 0;
+        background-color: chartreuse;
+    }
 
-        h1.margin-16px-width-auto {
-            width: auto;
-            margin: 0 16px;
-            background-color: lightblue;
-        }
+    h1.margin-16px-width-auto {
+        width: auto;
+        margin: 0 16px;
+        background-color: lightblue;
+    }
 
-        h1.margin-16px-width-100pc {
-            width: 100%;
-            margin: 0 16px;
-            background-color: lightpink;
-        }
-    </style>
+    h1.margin-16px-width-100pc {
+        width: 100%;
+        margin: 0 16px;
+        background-color: lightpink;
+    }
+</style>
 
-    <!-- Content dimensions. Width = 1000 or the width of the window. Height = 37px because of text height. All four sides of H1 are flush with the window-->
-    <h1 class="margin-zero-width-default"> Margin 0, Width default auto </h1>
+<!-- Content dimensions. Width = 1000 or the width of the window. Height = 37px because of text height. All four sides of H1 are flush with the window-->
+<h1 class="margin-zero-width-default"> Margin 0, Width default auto </h1>
 
-    <!-- Content dim = 968W x 37H (968 = 1000 - 16 - 16). And now H1 has a 16px gap on left and right. 
-        Top is flush with the top of the page. Bottom there is as much gap as the window height. -->
-    <h1 class="margin-16px-width-auto">Margin 16 px, Width auto</h1>
-    
-    <!-- Content dim = 1000W x 37H (note that the content width did not reduce to accomodate the margins). 
-        And now H1 has a 16px gap visible ONLY on the left. Right is flush with the right edge of the page. Dev tools still show 16px margin on left and right.
-        Top is flush with the top of the page. Bottom there is as much gap as the window height. -->
-    <h1 class="margin-16px-width-100pc">Margin 16 px, Width 100%</h1>
-    <h1 class="margin-16px-width-100pc">Margin 16 px, Width 100% - repeat</h1>
+<!-- Content dim = 968W x 37H (968 = 1000 - 16 - 16). And now H1 has a 16px gap on left and right.
+    Top is flush with the top of the page. Bottom there is as much gap as the window height. -->
+<h1 class="margin-16px-width-auto">Margin 16 px, Width auto</h1>
+
+<!-- Content dim = 1000W x 37H (note that the content width did not reduce to accommodate the margins).
+    And now H1 has a 16px gap visible ONLY on the left. Right is flush with the right edge of the page. Dev tools still show 16px margin on left and right.
+    Top is flush with the top of the page. Bottom there is as much gap as the window height. -->
+<h1 class="margin-16px-width-100pc">Margin 16 px, Width 100%</h1>
+<h1 class="margin-16px-width-100pc">Margin 16 px, Width 100% - repeat</h1>
 
 
-    <!-- Center align an element using the trick - 50% width and auto lef/right margins -->
-    <style>
-        h3 {
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-    </style>
+<!-- Center align an element using the trick - 50% width and auto left/right margins -->
+<style>
+    h3 {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: peachpuff;
+    }
 
-    <h3>I am center aligned with margin-left/right = auto</h3>
+    h3.width-as-percent {
+        width: 50%;
+    }
+
+    .width-as-max-content {
+        width: max-content;
+    }
+</style>
+
+<h3 class="width-as-percent">This div is horizontally centered in the outer box, but peach color bleeds beyond the
+    text.</h3>
+<h3 class="width-as-max-content">This div is horizontally centered in the outer box and text length fits in the peach
+    box.</h3>
+
+<hr/>
+
+<h2>Exercise - center aligned text with breathing space on smaller screens (max-width-wrapper)</h2>
+<style>
+    .max-width-wrapper {
+        background-color: #222;
+        border: 1px solid #222;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .card {
+        background-color: white;
+        padding: 32px;
+        border-radius: 8px;
+    }
+</style>
+<div class="max-width-wrapper">
+    <div class="card">
+        <p>Otters have long, slim bodies and relatively short limbs. Their most striking anatomical features are the
+            powerful webbed feet used to swim, and their seal-like abilities holding breath underwater.</p>
+    </div>
+</div>
+
 </body>
 
 </html>
