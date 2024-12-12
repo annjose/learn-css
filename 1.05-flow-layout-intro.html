@@ -60,9 +60,14 @@
         }
     </style>
 
-    <div class="box-800">Hello world on this line is the default inline display:
-        <strong>Hello World</strong></div>
-    <div class="box-800">Hello world on this line is the inline-block display
+    <p>The Hello World text in &lt;strong&gt; below has the <em>display: inline</em>, the default value. So it does not honor the width, height or margin-top properties.</p>
+    <div class="box-800">Some regular text
+        <strong>Hello World</strong>
+    </div>
+
+    <br /><br />
+    <p style="line-height: 0">However, the same text below has <em>display:inline-block</em>. So the block-level properties like width: 100px, height: 40px and margin-top: 24px are in effect.</p>
+    <div class="box-800">Some regular text
         <strong class="sample-inline-block">Hello World</strong>
     </div>
 </body>
